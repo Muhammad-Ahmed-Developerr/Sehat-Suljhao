@@ -1,0 +1,6 @@
+{
+  "name": "Sehat Suljhao",
+  "description": "Smart AI Medical Report Analyzer & Health Assistant powered by Dr. Mona",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

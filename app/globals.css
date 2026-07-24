@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #07121E;
+    --card-bg: #0E1C2F;
+    --primary: #00D4FF;
+    --accent: #5BE7FF;
+    --success: #00E676;
+    --warning: #FFC107;
+    --danger: #FF4D4F;
+    --text-main: #FFFFFF;
+    --text-muted: #9FB3C8;
+  }
+
+  body {
+    background-color: #07121E;
+    color: #FFFFFF;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07121E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E2D42;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00D4FF;
+}
+
+/* Custom Glows and Glassmorphism */
+.glass-panel {
+  background: rgba(14, 28, 47, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(18, 35, 58, 0.88);
+  border-color: rgba(0, 212, 255, 0.35);
+  box-shadow: 0 12px 40px 0 rgba(0, 212, 255, 0.12);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.25);
+}
+
+.glow-cyan-lg {
+  box-shadow: 0 0 50px rgba(0, 212, 255, 0.35);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 25px rgba(0, 230, 118, 0.25);
+}
+
+.glow-danger {
+  box-shadow: 0 0 25px rgba(255, 77, 79, 0.25);
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle at 50% 0%, rgba(0, 212, 255, 0.15) 0%, rgba(7, 18, 30, 0) 70%);
+}
+
+.bg-radial-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.08) 0%, transparent 60%);
+}
+
+/* Animated gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #FFFFFF 0%, #00D4FF 50%, #5BE7FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-emerald {
+  background: linear-gradient(135deg, #FFFFFF 0%, #00E676 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-amber {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFC107 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Scanning Pulse Line */
+@keyframes scanline {
+  0% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.8;
+  }
+}
+
+.animate-scanline {
+  animation: scanline 2.5s ease-in-out infinite alternate;
+}
+
+/* Pulsing Brain Glow */
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.9;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
